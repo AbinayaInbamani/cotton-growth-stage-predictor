@@ -302,7 +302,6 @@ else:
           emergence, first square, first flower, cutout,
           first cracked boll, and 60% open.
 
-        Use this as a **research & learning tool** or a **support tool** alongside
-        your local extension recommendations.
+        Use this as a **research & learning tool** or a **support tool** 
         """
     )
