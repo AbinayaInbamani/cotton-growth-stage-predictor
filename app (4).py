@@ -278,21 +278,7 @@ if run_button:
                     delta=f"{row['Threshold_DD60']} DD60",
                 )
 
-        # Explanation / insights
-        st.markdown("---")
-        st.subheader(" Interpretation Notes")
-
-        st.markdown(
-            f"""
-            - This run used the **{model}** model to accumulate heat units.
-            - Growth stage thresholds (106, 670, 1116, 1618, 2209, 2523 DD60) come from
-              multi-state cotton trials in 2018–2019.
-            - **If your GDD curve reaches a stage later than expected**, it may reflect:
-              - Local stress (cool soil, pests, drought)
-              - Variety differences vs. the trial cultivars
-              - Management (planting date, irrigation, fertility)
-            """
-        )
+      
 
     except Exception as e:
         st.error(f"Something went wrong: {e}")
