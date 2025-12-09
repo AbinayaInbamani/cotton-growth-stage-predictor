@@ -12,7 +12,6 @@ from opencage.geocoder import OpenCageGeocode
 
 st.set_page_config(
     page_title="Cotton Heat Unit Planner (DD60 / DD55)",
-    page_icon="🌱",
     layout="wide",
 )
 
@@ -171,14 +170,14 @@ def predict_stage_dates(df: pd.DataFrame, thresholds: dict) -> pd.DataFrame:
 # 3. UI LAYOUT
 # ---------------------------------------------------------
 
-st.title("🌱 Cotton Heat Unit Planner (DD60 / DD55 / DD55+86°F)")
+st.title("Cotton Heat Unit Planner (DD60 / DD55 / DD55+86°F)")
 st.caption(
     "Reevaluating cotton heat-unit requirements using Raper et al. (2023), "
     "with DD60, DD55, and DD55+86°F options powered by NASA POWER data."
 )
 
 with st.sidebar:
-    st.header("📍 Location & Dates")
+    st.header(" Location & Dates")
 
     place_mode = st.radio(
         "How do you want to specify location?",
@@ -205,7 +204,7 @@ with st.sidebar:
     )
 
     st.markdown("---")
-    st.header("🌡️ GDD Model")
+    st.header("GDD Model")
 
     model = st.radio(
         "Select GDD model",
@@ -225,7 +224,7 @@ with st.sidebar:
         """
     )
 
-    run_button = st.button("🚀 Run Cotton GDD Analysis")
+    run_button = st.button(" Run Cotton GDD Analysis")
 
 
 # ---------------------------------------------------------
@@ -256,7 +255,7 @@ if run_button:
         # Compute GDD and cumulative GDD
         df_gdd = compute_gdd(df_temp.copy(), model=model)
 
-        st.subheader("📈 Daily Temperatures & GDD")
+        st.subheader(" Daily Temperatures & GDD")
         st.write(f"Location: **{formatted}**")
         st.dataframe(df_gdd, use_container_width=True, hide_index=True)
 
@@ -266,7 +265,7 @@ if run_button:
         st.line_chart(chart_df)
 
         # Predict growth stages (using DD60 thresholds as reference)
-        st.markdown("### 🌾 Predicted Cotton Growth Stages (Using DD Thresholds)")
+        st.markdown("### Predicted Cotton Growth Stages (Using DD Thresholds)")
 
         st.info(
             "Thresholds shown are DD60-based means from Raper et al. (2023). "
@@ -288,7 +287,7 @@ if run_button:
 
         # Explanation / insights
         st.markdown("---")
-        st.subheader("🧠 Interpretation Notes")
+        st.subheader(" Interpretation Notes")
 
         st.markdown(
             f"""
@@ -308,7 +307,7 @@ if run_button:
 else:
     st.markdown(
         """
-        ### ℹ️ How to use this tool
+        ###  How to use this tool
 
         1. **Choose a location** in the sidebar (place name or lat/lon).  
         2. **Set planting date** and an end date for the season.  
