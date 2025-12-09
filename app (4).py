@@ -171,11 +171,6 @@ def predict_stage_dates(df: pd.DataFrame, thresholds: dict) -> pd.DataFrame:
 # ---------------------------------------------------------
 
 st.title("Cotton Heat Unit Planner (DD60 / DD55 / DD55+86°F)")
-st.caption(
-    "Reevaluating cotton heat-unit requirements using Raper et al. (2023), "
-    "with DD60, DD55, and DD55+86°F options powered by NASA POWER data."
-)
-
 with st.sidebar:
     st.header(" Location & Dates")
 
