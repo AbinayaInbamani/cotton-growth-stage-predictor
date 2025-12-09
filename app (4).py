@@ -213,9 +213,7 @@ with st.sidebar:
     st.markdown(
         """
         - **DD60** is the standard US cotton model.  
-        - **DD55** and **DD55 + 86°F** are experimental models that sometimes
-          improve prediction of flower, cutout, and cracked boll in research
-          trials, but only slightly.
+        - **DD55** and **DD55 + 86°F** are experimental models 
         """
     )
 
