@@ -261,7 +261,6 @@ if run_button:
         st.markdown("### Predicted Cotton Growth Stages (Using DD Thresholds)")
 
         st.info(
-            "Thresholds shown are DD60-based means from Raper et al. (2023). "
             "When you switch to DD55 / DD55+86°F, this becomes an *experimental* comparison."
         )
 
